@@ -1,11 +1,15 @@
 # 个人知识库
 
-通过 Obsidian 管理的知识库。在 Obsidian 中选择“打开本地仓库”，打开本项目的 `vault/` 文件夹。
+通过 Obsidian 管理的个人知识库。
 
-- `vault/inbox/`：临时记录与待整理笔记。
-- `vault/notes/`：正式笔记。
-- `vault/attachments/`：图片、PDF 等附件，建议在 Obsidian 中设为默认附件目录。
-- `vault/templates/`：笔记模板。
+## 使用方式
+
+1. 在 Obsidian 中选择“打开本地仓库”，打开本项目的 `vault/` 文件夹。
+2. 临时记录先放入 `inbox/`，整理后的正式笔记放入 `notes/`。
+3. 在 Obsidian 设置中将 `attachments/` 设为默认附件目录，用于存放图片、PDF 等文件。
+4. 将可复用的笔记模板放入 `templates/`；使用 Obsidian 的模板功能时，将其设为模板目录。
+
+笔记、附件与 Obsidian 共享配置纳入 Git；工作区状态、插件运行目录和回收站忽略。
 
 ## 开发工具
 
@@ -36,14 +40,11 @@ chore: 更新工具配置
 需要描述具体变更时，在标题后空一行，再使用 `- ` 开头的正文列表。正文可省略，不限制行长度和大小写；`-` 列表是推荐写法，也允许普通正文段落。
 
 ```text
-chore: 初始化 Obsidian 知识库及提交规范
+chore: 初始化开发工具及提交规范
 
-- 创建 vault 笔记、附件和模板目录
 - 限定 Node 与 pnpm 版本
 - 配置 Husky、Prettier 和 commitlint
 - 添加忽略规则与中文 README
 ```
 
 不要把 `-` 列表项用作首行标题；缺少合法 type、描述或标题与正文之间的空行时，提交会被拒绝。
-
-笔记、附件与 Obsidian 共享配置纳入 Git；工作区状态、插件运行目录和回收站忽略。
